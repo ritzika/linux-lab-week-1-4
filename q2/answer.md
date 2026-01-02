@@ -77,6 +77,25 @@ smart-rabbit@grassland:~/documents$ ls -l plan.txt
 ### Explanation
 `ls -l` command lists the contents of the specified directory along with detailed file information.
 
+## 5. File Duplication
+
+### Command used
+```command
+cp plan.txt plan_copy.txt
+cat plan_copy.txt
+```
+
+### Output
+```command
+smart-rabbit@grassland:~/documents$ cp plan.txt plan_copy.txt
+smart-rabbit@grassland:~/documents$ cat plan_copy.txt 
+Linux file management assignment.
+```
+![file_duplication.png](file_duplication.png)
+
+### Explanation
+`cp` command is used to copy files.
+
 ## 6. Directory Renaming
 
 ### Command used
@@ -109,7 +128,7 @@ mkdir archive
 ```terminaloutput
 smart-rabbit@grassland:~/project_documents$ mkdir archive
 smart-rabbit@grassland:~/project_documents$ ls
-archive  plan.txt
+archive  plan.txt plan_copy.txt
 ```
 ![subdirectory.png](subdirectory.png)
 
@@ -120,20 +139,19 @@ archive  plan.txt
 
 ### Command used
 ```Commands
-mv plan.txt archive/
+mv plan_copy.txt archive/
 ```
 ### Output
 ```terminaloutput
-smart-rabbit@grassland:~$ cd project_documents
 smart-rabbit@grassland:~/project_documents$ ls
-archive  plan.txt
-smart-rabbit@grassland:~/project_documents$ mv plan.txt archive/
+archive  plan.txt plan_copy.txt
+smart-rabbit@grassland:~/project_documents$ mv plan_copy.txt archive/
 smart-rabbit@grassland:~/project_documents$ cd archive/
 smart-rabbit@grassland:~/project_documents/archive$ ls
-plan.txt
+plan_copy.txt
 smart-rabbit@grassland:~/project_documents/archive$ 
 ```
-![move-file.png](move-file.png)
+![move_file.png](move_file.png)
 
 ### Explanation
 `mv` command is used to move files between directories.
@@ -146,16 +164,15 @@ ls -R ~/project_documents
 ```
 ### Output
 ```terminaloutput
-smart-rabbit@grassland:~$ cd project_documents/
-smart-rabbit@grassland:~/project_documents$ ls -R ~/project_documents
-/home/smart-rabbit/project_documents:
-archive
+smart-rabbit@grassland:~/project_documents$ ls -R ~/project_documents/
+/home/smart-rabbit/project_documents/:
+archive  plan.txt
 
 /home/smart-rabbit/project_documents/archive:
-plan.txt
-
+plan_copy.txt
 ```
-![recursive-order.png](recursive-order.png)
+![recursive-files.png](recursive-files.png)
+
 ### Explanation
 `ls -R` lists all files and subdirectories recursively, displaying the complete directory structure of project_documents.
 
@@ -163,15 +180,15 @@ plan.txt
 
 ### Command used
 ```Commands
-pwd
-
+realpath plan_copy.txt
 ```
 ### Output
 ```terminaloutput
-smart-rabbit@grassland:~/project_documents$ pwd
-/home/smart-rabbit/project_documents
-smart-rabbit@grassland:~/project_documents$ 
+smart-rabbit@grassland:~/project_documents/archive$ ls
+plan_copy.txt
+smart-rabbit@grassland:~/project_documents/archive$ realpath plan_copy.txt 
+/home/smart-rabbit/project_documents/archive/plan_copy.txt
 ```
-![path-verification.png](path-verification.png)
+![absolute_path.png](absolute_path.png)
 ### Explanation
-`pwd` command displays the full path of the current working directory.
+`realpath` command displays the absolute path of the specified file.

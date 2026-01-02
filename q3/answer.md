@@ -118,7 +118,7 @@ smart-rabbit@grassland:~$
 ![disk-usage.png](../q3/disk-usage.png)
 
 ### Explanation
-`du -sh` command is used to check the disk usage.
+`du -sh` command is used to check the disk usage in human-readable format.
 
 ## 8. File Size Overview
 

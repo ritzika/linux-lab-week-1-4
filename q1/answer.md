@@ -61,10 +61,10 @@ cat user_info.txt
 
 ```terminalOutput
 smart-rabbit@grassland:~$ echo "Linux user environment verified" > user_info.txt 
-smart-r![environment_validation.png](environment_validation.png)abbit@grassland:~$ cat user_info.txt
+smart-rabbit@grassland:~$ cat user_info.txt
 Linux user environment verified
 ```
-![environment_validation.png](environment_validation.png)
+![environment_confirmation.png](environment_confirmation.png)
 
 ### Explanation
 `echo` command writes the given text into the file user_info.txt, confirming the Linux user environment. 
@@ -94,7 +94,7 @@ smart-rabbit@grassland:~$ wc -m user_info.txt
 ### Command used
 ```Commands
 man mkdir
-mkdir -p directory_name
+mkdir -p parent1/parent2/child
 ```
 ### Output
 ```terminaloutput
@@ -162,8 +162,6 @@ smart-rabbit@grassland:~/Desktop$ vi log.txt
 smart-rabbit@grassland:~/Desktop$ grep admin log.txt
 admin performed configuration change
 ```
-![log-file.png](log-file.png)
-
 
 ![log_investigation.png](log_investigation.png)
 
@@ -172,7 +170,7 @@ admin performed configuration change
 
 `grep` command is used to search for a specific word inside a file.
 
-## System Information Check
+## 8. System Information Check
 
 ### Command used
 ```Commands
@@ -218,7 +216,7 @@ PING www.google.com (2404:6800:4007:836::2004) 56 data bytes
 ## 10. System Health Awareness
 ### Commands used
 ```Commands
-ping www.google.com
+uptime
 ```
 ### Output
 ```terminaloutput
